@@ -16,27 +16,6 @@ Redux Toolkit – Global state management
 Recharts – Data visualization
 
 Tailwind CSS – Styling framework
-
-📂 Project Structure
-bash
-Copy
-Edit
-📦 nlp-dashboard  
- ┣ 📂 src  
- ┃ ┣ 📂 components  
- ┃ ┃ ┣ 📜 QueryInput.js    # Handles user input  
- ┃ ┃ ┣ 📜 ChartRenderer.js  # Renders charts dynamically  
- ┃ ┃ ┣ 📜 Suggestions.js   # Displays query suggestions  
- ┃ ┣ 📂 redux  
- ┃ ┃ ┣ 📜 querySlice.js   # Redux logic for query management  
- ┃ ┣ 📂 data  
- ┃ ┃ ┣ 📜 mockResponses.js  # Sample chart data  
- ┃ ┣ 📜 App.js  
- ┃ ┣ 📜 index.js  
- ┃ ┣ 📜 store.js   # Redux store  
- ┣ 📜 package.json  
- ┣ 📜 README.md  
-
  
 🏗 Installation & Setup
 1️⃣ Clone the Repository
