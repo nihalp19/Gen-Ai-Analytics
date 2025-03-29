@@ -56,17 +56,28 @@ export default function QueryInput() {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [inputValue, setInputValue] = useState('');
 
+  const suggestionToTitleMap = {
+    "Show me monthly revenue trends": "Monthly Revenue Trends",
+    "Compare sales by region": "Sales by Region",
+    "What is our customer growth rate?": "Customer Growth",
+    "Display product category distribution": "Product Category Distribution"
+  };
+  
   const simulateNLPProcessing = async (query) => {
     dispatch(setLoading(true));
     dispatch(addToHistory(query));
-
+  
     for (const step of processingSteps) {
       dispatch(setProcessingSteps(step));
       await new Promise(resolve => setTimeout(resolve, 600));
     }
-
-    const randomResponse = mockResponses[Math.floor(Math.random() * mockResponses.length)];
-    dispatch(setResults(randomResponse));
+  
+    const title = suggestionToTitleMap[query] || query; // Ensure correct mapping
+    const matchedResponse = mockResponses.find(response =>
+      response.title.toLowerCase() === title.toLowerCase()
+    );
+  
+    dispatch(setResults(matchedResponse || { error: "No matching data found" }));
     dispatch(setLoading(false));
     dispatch(setProcessingSteps(null));
   };
@@ -139,4 +150,3 @@ export default function QueryInput() {
   );
 }
 
-//kskkskksk

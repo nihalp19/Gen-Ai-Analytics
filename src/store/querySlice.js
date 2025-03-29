@@ -12,12 +12,6 @@ const initialState = {
     'Compare sales by region',
     'What is our customer growth rate?',
     'Display product category distribution',
-    'Analyze quarterly performance',
-    'Show me customer acquisition costs',
-    'Which products are trending?',
-    'How is our market share evolving?',
-    'What are the key performance indicators?',
-    'Show customer satisfaction metrics'
   ]
 }; 
 
