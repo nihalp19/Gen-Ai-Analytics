@@ -36,6 +36,8 @@ Edit
  ┃ ┣ 📜 store.js   # Redux store  
  ┣ 📜 package.json  
  ┣ 📜 README.md  
+
+ 
 🏗 Installation & Setup
 1️⃣ Clone the Repository
 bash
@@ -87,6 +89,8 @@ const simulateNLPProcessing = async (query) => {
   dispatch(setLoading(false));
   dispatch(setProcessingSteps(null));
 };
+
+
 📊 Charts & Data Visualization
 Supported Chart Types
 ✔ Line Chart – Revenue growth over time
@@ -109,6 +113,8 @@ const ChartRenderer = ({ data }) => {
     default: return <p>No chart available</p>;
   }
 };
+
+
 🎨 Styling with Tailwind CSS
 Example Tailwind CSS usage in QueryInput.js:
 
@@ -119,6 +125,8 @@ Edit
   className="border p-2 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
   placeholder="Ask me something..."
 />
+
+
 🛠 Future Improvements
 ✅ Improve NLP Query Understanding using an AI-based parser
 ✅ Add Filters & Customization for charts
